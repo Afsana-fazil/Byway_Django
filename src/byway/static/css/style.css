@@ -121,7 +121,7 @@ header .main nav.right ul li a.btn2:hover {
 #list {
     margin-top: 60px;
     background: #F8FAFC;
-    padding: 40px 80px;
+    padding: 40px 0;
 }
 
 #list ul {
@@ -187,8 +187,10 @@ header .main nav.right ul li a.btn2:hover {
 #category .items .item {
     border: 1px solid #E2E8F0;
     box-shadow: 0px 0px 8px 0px #3B82F61F;
-    padding: 24px 76px;
+    padding: 24px 78px;
     border-radius: 16px;  
+    flex: 1;
+    max-width: 33%;
 }
 
 #category .items .item:hover {
@@ -247,7 +249,7 @@ header .main nav.right ul li a.btn2:hover {
 #courses .citems {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -340,6 +342,7 @@ header .main nav.right ul li a.btn2:hover {
     padding: 16px;
     border-radius: 8px;  
     text-align: center;
+    cursor: pointer;
 }
 
 #instructor .sitems .item:hover {
@@ -455,6 +458,7 @@ header .main nav.right ul li a.btn2:hover {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    cursor: pointer;
 }
 
 #testimonials div.content ul li:hover { 
@@ -542,7 +546,7 @@ header .main nav.right ul li a.btn2:hover {
 
 footer { 
     background: #1E293B;
-    padding: 80px;
+    padding: 80px 0;
 }
 
 footer .container { 
@@ -707,6 +711,11 @@ footer section.container div.right div.item span.logos {
         text-align: center;
     }
 
+    #category .items .item {
+        flex-grow: 0;
+        max-width: 100%;
+    }
+
     #testimonials div.content ul li p {
         width: 90%;
     }
@@ -738,6 +747,10 @@ footer section.container div.right div.item span.logos {
     
     #spotlight .container .content h2 br {
         display: none;
+    }
+
+    #category .items .item {
+        flex-basis: 40%;
     }
 
     #courses .citems .item {
@@ -782,7 +795,7 @@ footer section.container div.right div.item span.logos {
     }
 
     #category .items .item {
-        width: 80%;
+        flex-basis: 80%;
     }
 
     #instructor .sitems .item {
@@ -869,6 +882,6 @@ footer section.container div.right div.item span.logos {
 
 @media all and (max-width: 320px) {
     #category .items .item {
-        width: 100%;
+        flex-basis: 100%;
     }
 }
